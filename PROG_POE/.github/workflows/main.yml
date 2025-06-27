@@ -1,4 +1,4 @@
-﻿name: Build CRYPTOBOT WPF App
+﻿name: Build WPF CRYPTOBOT
 
 on:
   push:
@@ -14,25 +14,25 @@ jobs:
       Solution_Name: PROG_POE.sln
 
     steps:
-      - name: Checkout Repository
+      - name:  Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
+      - name:  Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x  
+          dotnet-version: 8.0.x
 
-      - name: Setup MSBuild
+      - name:  Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
-      - name: Restore NuGet Packages
+      - name:  Restore NuGet Packages
         run: msbuild $env:Solution_Name /t:Restore
 
-      - name: Build Solution
+      - name:  Build Solution
         run: msbuild $env:Solution_Name /p:Configuration=Release
 
-      - name: Upload Build Output
+      - name:  Upload Build Output
         uses: actions/upload-artifact@v4
         with:
-          name: BuiltApp
+          name: Build-Artifacts
           path: '**/bin/Release/**'
