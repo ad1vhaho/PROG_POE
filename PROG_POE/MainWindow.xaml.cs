@@ -97,7 +97,7 @@ namespace PROG_POE
             {
                 AddChatMessage("👋 Goodbye! Stay safe online.");
                 Application.Current.Shutdown();
-                return;
+                return; 
             }
 
             AddChatMessage($"You: {input}");
