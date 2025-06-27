@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROG_POE"
         mc:Ignorable="d"
-        Title="Cyber Security Chatbot" Height="600" Width="1000" MinWidth="800" MinHeight="600">
+        Title=" CRYPTOBOT-Cyber Security Chatbot" Height="600" Width="1000" MinWidth="800" MinHeight="600">
 
     <Window.Resources>
         <Style x:Key="RoundedButton" TargetType="Button">
@@ -49,7 +49,6 @@
             <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
         <StackPanel Grid.Column="0" Background="#333" >
             <TextBlock FontFamily="Consolas" FontSize="12" Foreground="LightGreen" TextWrapping="Wrap">
                 <![CDATA[
@@ -63,7 +62,6 @@ C   R   Y   P   T   O   B   O   T
             <Button Content="Tasks" Style="{StaticResource OrangeButton}" Click="Tasks_Click" Margin="0,0,0,5"/>
         </StackPanel>
 
-        <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
